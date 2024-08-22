@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Martel Sans", sans-serif;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1400px) {
+    .main {
+        /* min-width: 3000px; */
+        /* background-image: cover; */
+        background-repeat: repeat;
+        max-height: 90vh;
+    }
+
+    .first {
+        justify-content: space-around;
+    }
+    .second{
+        justify-content: space-around;
+    }
+    .fourth{
+        justify-content: space-around;
+    }
+    .section.third{
+        padding-left: 20rem;
+        flex-wrap: wrap;
+    }
+    .third p.para1{
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .third p.para2{
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+        text-wrap: wrap;
+    }
+    .third p.para2.fourth p.para2{
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+
+    .fourth p.para2{
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+        text-wrap: wrap;
+    }
+    #kids{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .span1 {
+        max-width: 80vw;
+        /* display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap; */
+        font-size: 2.2rem;
+        gap: 0.4rem;
+        line-height: 3.5rem;
+    }
+
+    #span2 {
+        display: block;
+    }
+
+    .common-span {
+        max-width: 80vw;
+    }
+
+    .email-box.input {
+        flex-direction: column;
+        row-gap: 10px;
+        .gtbtn {
+            min-width: 200px;
+        }
+    }
+
+    .first {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .second{
+        flex-direction: column;
+        justify-content: space-evenly;
+        row-gap: 100px;
+    }
+    .fourth{
+        flex-direction: column;
+    }
+    div.box2{
+        flex-wrap: wrap;
+    }
+    .article1, .article2{
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .span1{
+        font-size: 1.5rem;
+    }
+    .section.third{
+        padding-left: 5rem;
+    }
+    #kids{
+        min-width: 30vw;;
+        height: auto;
+    }
+   
+    .para1.h2FAQ{
+        font-size: 2.5rem;
+    }
+    #input2-txt{
+        max-width: 80vw;
+    }
+}
+@media screen and (max-width:600px){
+    .FAQ-btn{
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .section.third{
+        padding-left: 2rem;
+        flex-wrap: wrap;
+    }
+}
+
+.main {
+    background-image: url("netflixItems/background-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 0px;
+    /* position: absolute;
+    top: 0px; */
+    /* z-index: 2; */
+
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.box {
+    opacity: 0.7;
+    /*we've set the background colour black as a result opacity was set to see the bg-img through the black light*/
+    position: absolute;
+    top: 0px;
+    /* navbar er karone box ta bg theke ektu niche neme giyechilo, ja position absolute and top dara thik kora hoiche */
+    background-color: black;
+    /* background-color: transparent;allows the background-img transparent through the box */
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+nav {
+    /* background-color: cyan; */
+    height: 6vh;
+    width: 80vw;
+    margin: auto;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 5;
+}
+
+.navbar {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#logo {
+    height: 5.5vh;
+    /* nicher duiti line er navbar beshi visible hoy, ba colpour brightness bare*/
+    position: relative;
+    z-index: 10;
+    /* color: rgb(229, 9, 20);
+    to make the logo red use fill on svg */
+}
+
+#signIn {
+    height: 32px;
+    width: 80px;
+    margin: 5px;
+
+    /* position: relative;
+    z-index: 10; */
+
+    font-size: 0.875rem;
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    background-color: hsl(357, 100%, 50%);
+}
+
+.centralText {
+    /* height: calc(100% - 200px); */
+    width: 100%;
+    min-height: 94vh;
+    /*box e jototuku height set kora ache tar 100% nibe*/
+    font-family: "Martel Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    gap: 0.8rem;
+}
+
+.centralText :nth-child(1) {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.centralText :nth-child(2) {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.centralText :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.input {
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    column-gap: 10px;
+    height: 9vh;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+#email {
+    min-width: 30vw;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    border-radius: 0.25rem;
+    height: auto;
+    padding: 1rem 0.5rem;
+}
+
+.gtbtn {
+    background-color: rgb(229, 9, 20);
+    border-radius: 0.25rem;
+    min-width: 20vw;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+}
+
+.seperation {
+    height: 8px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+
+/* First Section */
+.section {
+    max-width: 100vw;
+    color: white;
+    font-family: "Martel Sans", sans-serif;
+}
+
+.first {
+    margin: 2.5rem 0 2.5rem 0;
+    column-gap: 50px;
+    max-width: 100vw;
+    height: auto;
+}
+
+.sec1-txt {
+    font-family: "Martel Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec1-txt>:nth-child(1) {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.sec1-txt :nth-child(2) {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.tv {
+    position: relative;
+}
+
+.tv img {
+    max-height: 380px;
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.tv video {
+    position: absolute;
+    right: 70px;
+    top: 13px;
+    width: 370px;
+    height: 330px;
+}
+
+/* second section */
+.second{
+    margin: auto;
+    align-items: center;
+    /* column-gap: 10px; */
+    height: auto;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+}
+.mobile{
+    height: 380px;
+    width: 500px;
+    /* border: 2px solid red; */
+    position: relative;
+}
+.mobile img{
+    height: 360px;
+    position: relative;
+    bottom: 0;
+}
+.loading-box{
+    height: 105px;
+    width: 280px;
+    background-color: black;
+    border: 2px solid rgba(246, 238, 238, 0.5);
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+.loading-box img{
+    height: 80px;
+    width: 58px;
+}
+#p1{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+#p2{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #0071eb;
+}
+.animation{
+    height: 60px;
+    width: 48px;
+    border: 2px solid tomato;
+    border-radius: 50%;
+}
+.para1{
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    color: white;
+}
+.para2{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: white;
+}
+
+/*Third section*/
+.third{
+    height: auto;
+    padding: 5rem 0 5rem 12rem;
+
+}
+.only-txt{
+    min-width: 430px;
+    /* border: 1px solid red; */
+}
+
+/* section-4 */
+.fourth{
+    height: auto;
+    padding: 5rem 0 5rem 0;
+    column-gap: 10px;
+}
+
+.fourth img{
+    min-width: 30vw;
+    height: 380px;
+}
+
+/* section5 */
+.section5{
+    height: auto;
+}
+.h2FAQ{
+    text-align: center;
+    margin-top: 4rem ;
+    margin-bottom: 1.5rem;
+}
+.faqContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.FAQ-btn{
+    background-color: rgb(45, 45, 45);
+    min-width: 85vw;
+    height: auto;
+    text-wrap: wrap;
+    padding: 0 10px 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(45, 45, 45);
+    cursor: pointer;
+}
+.faq-txt{
+    color: white;
+    font-size: 1.8rem;
+}
+.FAQ-btn:hover{
+    background-color: hsl(0, 0%, 25%);
+}
+.plus{
+    font-size: 3.5rem;
+    font-weight: 10;
+    color: rgba(240, 232, 232, 0.74);
+}
+
+.input2{
+    color: white;
+   
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+#input2-txt{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* .footer */
+.footer{
+    height: auto;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 5rem;
+}
+.grid-box {
+    height: 270px;
+    width: 1030px;
+    display: grid;
+    grid-template-rows: 5.5vh 22vh 5.5vh 5.5vh;
+    grid-template-areas: "box1" "box2" "box3" "box4";
+    position: inherit;
+    z-index: 10;
+    
+    padding: 5rem 3rem;
+}
+
+.grid-box a {
+    color: rgb(224, 217, 217);
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2.5rem;
+}
+
+.grid-box li {
+    list-style-type: none;
+}
+
+.box1 {
+    /* grid-area: box1; */
+    grid-row: 1/2;
+    padding-bottom: 20px;
+}
+
+.box2 {
+    /* grid-area: box2; */
+    grid-row: 2/3;
+    display: flex;
+    column-gap: 130px;
+    justify-content: flex-start;
+    left: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.box3 {
+    grid-area: box3;
+    color: white;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+.box4 {
+    grid-area: box4;
+    color: white;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 200;
+}
